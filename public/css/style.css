@@ -1,0 +1,117 @@
+/*/ / GENERAL / /*/
+
+*, html {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --height-header: 100px;
+    --height-text-balloon: 200px;
+    --height-terminal-small: 300px;
+    --height-drawings: 300px;
+}
+
+body {
+    width: 100vw;
+    height: 100svh;
+
+    overflow: hidden;
+}
+
+
+/*/ / HEADER-SECTION / /*/
+
+header {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    background-color: yellowgreen;
+}
+
+#logo, #title, #cv-emblem {
+    width: calc(100% / 3);
+    padding: 0 100px;
+}
+
+#title {
+    text-align: center;
+}
+
+#cv-emblem {
+    text-align: right;
+}
+
+/*/ / MAIN / /*/
+main {
+    width: 70%;
+    height: calc(100% - var(--height-header));
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-rows: 1fr 3fr 2fr;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-areas: 
+    "text text text"
+    "line terminal terminal"
+    "basile . you";
+}
+
+/*/ / DIALOGUE TEMPLATE / /*/
+.text-balloon {
+    grid-area: text;
+    display: flex;
+    align-items: center;
+}
+
+.terminal {
+    grid-area: terminal;
+
+    border: 2px solid black;
+}
+
+.text-balloon-line {
+    grid-area: line;
+display: flex;
+justify-content: center;
+}
+
+.actual-line {
+    width: 2px;
+    height: 100%;
+
+    background-color: black;
+}
+
+.basile {
+    grid-area: basile;
+    background-color: brown;
+}
+
+.you {
+    grid-area: you;
+    background-color: brown;
+}
+
+/*/ / TERMINAL / /*/
+.bar {
+    width: 100%;
+    height: 30px;
+    border-bottom: 2px solid black;
+
+    color: white;
+    background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+}
+
+.bar p {
+    line-height: 30px;
+}
+
+.content {
+    width: 100%;
+    height: calc(100% - 30px);
+    background-color: black;
+}
