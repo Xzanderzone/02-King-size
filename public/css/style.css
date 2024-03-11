@@ -8,14 +8,19 @@
 
 :root {
     --height-header: 100px;
-    --height-text-balloon: 200px;
-    --height-terminal-small: 300px;
-    --height-drawings: 300px;
+    --height-text-balloon: 180px;
+    --height-drawings: 200px;
 }
 
 body {
     width: 100vw;
     height: 100svh;
+
+    font-size: x-large;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     overflow: hidden;
 }
@@ -24,16 +29,14 @@ body {
 /*/ / HEADER-SECTION / /*/
 
 header {
-    width: 100%;
+    width: 80%;
     height: 100px;
     display: flex;
     align-items: center;
-    background-color: yellowgreen;
 }
 
 #logo, #title, #cv-emblem {
     width: calc(100% / 3);
-    padding: 0 100px;
 }
 
 #title {
@@ -46,12 +49,12 @@ header {
 
 /*/ / MAIN / /*/
 main {
-    width: 70%;
+    width: 80%;
     height: calc(100% - var(--height-header));
     margin: 0 auto;
 
     display: grid;
-    grid-template-rows: 1fr 3fr 2fr;
+    grid-template-rows: var(--height-text-balloon) 3fr var(--height-drawings);
     grid-template-columns: 1fr 3fr 1fr;
     grid-template-areas: 
     "text text text"
@@ -74,8 +77,8 @@ main {
 
 .text-balloon-line {
     grid-area: line;
-display: flex;
-justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
 .actual-line {
@@ -87,28 +90,38 @@ justify-content: center;
 
 .basile {
     grid-area: basile;
-    background-color: brown;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: end;
 }
 
 .you {
     grid-area: you;
-    background-color: brown;
+    display: flex;
+    justify-content: right;
+    align-items: end;
+}
+
+img {
+    height: calc(var(--height-drawings) - 10px );
 }
 
 /*/ / TERMINAL / /*/
 .terminal {
-    box-shadow: 0 0 0 1px rgba(148,0,211,1), 0 0 0 2px rgba(75,0,130,1), 0 0 0 3px rgba(0,0,255,1), 0 0 0 4px rgba(0,255,0,1), 0 0 0 5px rgba(255,255,0,1), 0 0 0 6px rgba(255,127,0,1), 0 0 0 7px rgba(255,0,0,1);
+   border: 2px solid gray;
 }
 
 .bar {
     width: 100%;
     height: 30px;
-    box-shadow: 0 0 0 1px rgba(148,0,211,1), 0 0 0 2px rgba(75,0,130,1), 0 0 0 3px rgba(0,0,255,1), 0 0 0 4px rgba(0,255,0,1), 0 0 0 5px rgba(255,255,0,1), 0 0 0 6px rgba(255,127,0,1), 0 0 0 7px rgba(255,0,0,1);
+    border: 2px solid gray;
+    
 
 
     color: white;
     background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    background: linear-gradient(90deg, rgb(50, 45, 142) 0%, rgb(102, 102, 190) 35%, rgb(132, 181, 211) 100%);
 }
 
 .bar p {
@@ -116,8 +129,10 @@ justify-content: center;
 }
 
 .content {
+    padding: 4px;
     width: 100%;
     height: calc(100% - 30px);
     background-color: rgb(28, 28, 29);
     z-index: -20;
 }
+

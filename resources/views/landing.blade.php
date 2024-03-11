@@ -5,7 +5,7 @@
     @include("_partials.header") 
     <main>
         <div class="text-balloon">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima libero, quos placeat dolor illo quasi laboriosam? Alias repellendus sapiente soluta quo. Similique illum pariatur quae tempore dolore ipsa necessitatibus reprehenderit! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium consequatur corporis blanditiis minus ab dolores fugiat illum, odit, sapiente maxime magnam optio nemo facilis sed commodi? Et dignissimos accusantium laudantium? Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias non iste repudiandae sunt sed, laborum dicta error laboriosam nisi repellendus dolorem exercitationem id iusto consequuntur nostrum quam sequi quidem esse?
+            Alias repellendus sapiente soluta quo. Similique illum pariatur quae tempore dolore ipsa necessitatibus reprehenderit! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium consequatur corporis blanditiis minus ab dolores fugiat illum, odit, sapiente maxime magnam optio nemo facilis sed commodi? Et dignissimos accusantium laudantium? Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias non iste repudiandae sunt sed, laborum dicta error laboriosam nisi repellendus dolorem exercitationem id iusto consequuntur nostrum quam sequi quidem esse?
         </div>
         <div class="terminal">
             <div class="bar">
@@ -26,8 +26,8 @@
             </div>
         </div>
         <div class="text-balloon-line"><div class="actual-line"></div></div>
-        <div class="basile"></div>
-        <div class="you"></div>
+        <div class="basile"><img src="media\stickmen\Stickman.svg" alt=""></div>
+        <div class="you"><img src="media\stickmen\Stickman-glasses-03.svg" alt=""></div>
     </main>
 </body>
 </html>
